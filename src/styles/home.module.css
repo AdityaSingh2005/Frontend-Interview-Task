@@ -1,0 +1,25 @@
+.container{
+    display: flex;
+}
+
+.container > :first-child{
+    flex-shrink: 0;
+}
+
+.container> :last-child {
+    flex: 1;
+}
+
+.home{
+    padding: 20px;
+    margin-left: 40px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background-color: azure;
+    height: 100vh;
+}
+.home p {
+    color: black;
+    line-height: 60px;
+
+}

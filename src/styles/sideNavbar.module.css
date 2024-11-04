@@ -1,0 +1,134 @@
+.sideNavbar{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 16px;
+    background-color: #ffffff;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 400px;
+    height: 100%;
+}
+
+.logo {
+    width: 100%;
+}
+.logo img{
+    width: 30px;
+    height: auto;
+    cursor: pointer;
+}
+
+.dropdown{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 16px 24px;
+    background-color: whitesmoke;
+    border-radius: 8px;
+    gap: 10px;
+    width: 100%;
+    cursor: pointer;
+
+}
+.dropdown label img{
+    width: 30px;
+    height: auto;
+    cursor: pointer;
+}
+
+.dropdown .team{
+    color: black;
+    margin-bottom: 0;
+}
+
+.dropdown .team .free{
+    padding: 4px;
+    background-color: rgb(211, 211, 211);
+    border-radius: 4px;
+    color: rgb(126, 125, 125);
+    margin-bottom: 0;
+}
+
+.nav{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-height: 300px;
+    overflow: auto;
+    width: 100%;
+}
+
+.nav::-webkit-scrollbar {
+      width: 5px;
+      border-radius: 20px;
+  }
+
+  /* Track */
+  .nav::-webkit-scrollbar-track {
+      background: #f1f1f1;
+  }
+
+  /* Handle */
+  .nav::-webkit-scrollbar-thumb {
+      background: #9dc0d0;
+  }
+
+  /* Handle on hover */
+  .nav::-webkit-scrollbar-thumb:hover {
+      background: #888;
+  }
+.navLink{
+    display: flex;
+    align-items: center;
+    color: black;
+    padding: 10px;
+    text-decoration: none;
+    border-radius: 8px;
+    gap: 10px;
+    transition: background-color 0.3s;
+}
+
+.navLink label img{
+    width: 20px;
+    height: auto;
+}
+
+.navLink:hover{
+    color: rgb(126, 125, 125);
+    background-color: whitesmoke;
+}
+
+.upgradeSection{
+    padding: 20px 0;
+    text-align: center;
+}
+
+.upgradeText{
+    font-size: 24px;
+    color: red;
+}
+
+.upgradePrice{
+    font-size: 22px;
+    color: orange;
+    margin-top: 6px;
+}
+
+.upgradeButton{
+    margin-top: 10px;
+    padding: 12px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.upgradeButton:hover{
+    background-color: rgb(85, 85, 85);
+}
