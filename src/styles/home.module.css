@@ -1,25 +1,91 @@
-.container{
+.container {
     display: flex;
+    min-height: 100vh;
+    color: black;
 }
 
-.container > :first-child{
-    flex-shrink: 0;
-}
-
-.container> :last-child {
-    flex: 1;
-}
-
-.home{
-    padding: 20px;
-    margin-left: 40px;
-    overflow-x: hidden;
-    overflow-y: auto;
-    background-color: azure;
-    height: 100vh;
-}
 .home p {
     color: black;
     line-height: 60px;
 
+}
+
+.homeContent {
+    flex: 1;
+    padding: 2rem;
+    margin-left: 280px;
+    background: #fafafa;
+}
+
+.header {
+    margin-bottom: 2rem;
+}
+
+.header h1 {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.statsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+}
+
+.statCard {
+    background: white;
+    color: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.statHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.statIcon {
+    font-size: 1.5rem;
+}
+
+.growth {
+    color: #52c41a;
+    font-size: 0.875rem;
+}
+
+.decline {
+    color: #ff4d4f;
+    font-size: 0.875rem;
+}
+
+.statValue {
+    font-size: 2rem;
+    font-weight: 600;
+    margin: 0.5rem 0;
+}
+
+.chart {
+    height: 40px;
+    margin-top: 1rem;
+    opacity: 0.5;
+}
+
+.blue {
+    background: linear-gradient(135deg, #249ad0 0%, #003b7f 100%);
+}
+
+.purple {
+    background: linear-gradient(135deg, #9035cc 0%, #46007e 100%);
+}
+
+.yellow {
+    background: linear-gradient(135deg, #c5a91c 0%, #797300 100%);
+}
+
+.red {
+    background: linear-gradient(135deg, #c22115 0%, #5a0000 100%);
 }

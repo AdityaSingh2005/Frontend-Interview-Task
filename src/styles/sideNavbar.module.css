@@ -1,134 +1,208 @@
-.sideNavbar{
-    padding: 20px;
+.sideNavbar {
+    width: 280px;
+    height: 100vh;
+    padding: 1.5rem;
+    background: white;
+    border-right: 1px solid #f0f0f0;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 16px;
-    background-color: #ffffff;
     position: fixed;
     left: 0;
     top: 0;
-    width: 400px;
-    height: 100%;
 }
 
 .logo {
-    width: 100%;
-}
-.logo img{
-    width: 30px;
-    height: auto;
-    cursor: pointer;
+    margin-bottom: 1.5rem;
 }
 
-.dropdown{
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    padding: 16px 24px;
-    background-color: whitesmoke;
+.logoText {
+    font-size: 2rem;
+    color: #0066ff;
+    font-weight: bold;
+}
+
+.teamSelector {
+    position: relative;
+    margin-bottom: 1.5rem;
+}
+
+.teamButton {
+    width: 100%;
+    padding: 0.75rem;
+    background: #f8f9fa;
+    border: none;
     border-radius: 8px;
-    gap: 10px;
-    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     cursor: pointer;
-
-}
-.dropdown label img{
-    width: 30px;
-    height: auto;
-    cursor: pointer;
+    transition: background-color 0.2s;
 }
 
-.dropdown .team{
-    color: black;
-    margin-bottom: 0;
+.teamButton:hover {
+    background: #f0f0f0;
 }
 
-.dropdown .team .free{
-    padding: 4px;
-    background-color: rgb(211, 211, 211);
+.teamInfo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.teamLogo {
+    width: 24px;
+    height: 24px;
+    background: linear-gradient(135deg, #4a90e2, #7b68ee);
     border-radius: 4px;
-    color: rgb(126, 125, 125);
-    margin-bottom: 0;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.875rem;
 }
 
-.nav{
+.teamName {
+    font-weight: 500;
+}
+
+.teamType {
+    padding: 0.25rem 0.5rem;
+    background: #e9ecef;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    color: #6c757d;
+}
+
+.teamDropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    margin-top: 0.5rem;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+    padding: 0.5rem;
+}
+
+.teamOption {
+    width: 100%;
+    padding: 0.75rem;
+    border: none;
+    background: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: background-color 0.2s;
+}
+
+.teamOption:hover {
+    background: #f8f9fa;
+}
+
+.proBadge {
+    padding: 4px;
+    border-radius: 4px;
+    background: #e3f2fd;
+    color: #1976d2;
+}
+
+.freeBadge {
+    padding: 4px;
+    border-radius: 4px;
+    background: #e9ecef;
+    color: #6c757d;
+}
+
+.nav {
+    flex: 1;
     display: flex;
     flex-direction: column;
-    gap: 16px;
-    max-height: 300px;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+    max-height: 320px;
     overflow: auto;
-    width: 100%;
 }
 
 .nav::-webkit-scrollbar {
-      width: 5px;
-      border-radius: 20px;
-  }
+    width: 5px;
+    border-radius: 20px;
+}
 
-  /* Track */
-  .nav::-webkit-scrollbar-track {
-      background: #f1f1f1;
-  }
+.nav::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
 
-  /* Handle */
-  .nav::-webkit-scrollbar-thumb {
-      background: #9dc0d0;
-  }
+.nav::-webkit-scrollbar-thumb {
+    background: #9dc0d0;
+}
 
-  /* Handle on hover */
-  .nav::-webkit-scrollbar-thumb:hover {
-      background: #888;
-  }
-.navLink{
+.nav::-webkit-scrollbar-thumb:hover {
+    background: #888;
+}
+
+.navLink {
+    padding: 0.75rem;
+    border-radius: 8px;
     display: flex;
     align-items: center;
-    color: black;
-    padding: 10px;
+    gap: 0.75rem;
+    color: #495057;
     text-decoration: none;
-    border-radius: 8px;
-    gap: 10px;
-    transition: background-color 0.3s;
+    transition: all 0.2s;
+    position: relative;
 }
 
-.navLink label img{
+.navLink:hover {
+    background: #f8f9fa;
+    color: #000;
+}
+
+.navLink.active {
+    background: #f0f7ff;
+    color: #0066ff;
+}
+
+.navIcon {
     width: 20px;
-    height: auto;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.navLink:hover{
-    color: rgb(126, 125, 125);
-    background-color: whitesmoke;
-}
-
-.upgradeSection{
-    padding: 20px 0;
+.upgradeSection {
+    padding: 1.5rem;
+    background: #f8f9fa;
+    border-radius: 12px;
     text-align: center;
 }
 
-.upgradeText{
-    font-size: 24px;
-    color: red;
+.upgradeTitle {
+    font-size: 1.25rem;
+    color: #ff4d4f;
+    margin-bottom: 0.5rem;
 }
 
-.upgradePrice{
-    font-size: 22px;
-    color: orange;
-    margin-top: 6px;
+.upgradePrice {
+    color: #ffa940;
+    margin-bottom: 1rem;
 }
 
-.upgradeButton{
-    margin-top: 10px;
-    padding: 12px;
-    background-color: black;
+.upgradeButton {
+    width: 100%;
+    padding: 0.75rem;
+    background: #000;
     color: white;
     border: none;
     border-radius: 8px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.2s;
 }
 
-.upgradeButton:hover{
-    background-color: rgb(85, 85, 85);
+.upgradeButton:hover {
+    background: #333;
 }
